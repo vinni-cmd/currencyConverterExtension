@@ -1,28 +1,25 @@
 const amount = document.querySelector("#amount");
-const currency = document.querySelector("#amount");
+const currency = document.querySelector("#currency");
 const form = document.querySelector("#currencyConversion");
 const result = document.querySelector("#result");
 
-const apiKey = "";
-const apiUrl = "";
+const amountNum = parseInt(amount);
+const url = new URL('https://api.api-ninjas.com/v1/convertcurrency');
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const amountVal = amount.value
-  const currencyVal = currency.value
-  const url = apiUrl + currencyVal
-
-  fetch(url, {
-    headers: {
-      "X-API-KEY": apiKey
-    }
-  }).then(response => {
+  url.search = new URLSearchParams({
+    have: 'CAD',
+    want: currency.value,
+    amount: amount.value
+  })
+  fetch(url).then(response => {
     // handle api errors here
-    response.json()
+    console.log({ response })
+    return response.json();
   }).then(data => {
-    const rate = data.rate
-    const conversionResult = amountVal * rate;
-    result.textContent = `${amount} ${currency} = ${conversionResult.toFixed(2)} USD`
+    console.log({ data })
+    result.textContent = `${(data.old_amount).toFixed(2)} ${data.old_currency} = ${(data.new_amount).toFixed(2)} ${data.new_currency}`
   }).catch(error => {
     console.log(error);
     result.textContent = "An error occurred, please try again later"

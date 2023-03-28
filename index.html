@@ -10,20 +10,21 @@
 </head>
 
 <body>
-  <h1>Exchange Rate Converter</h1>
+  <h1>CAD Exchange Rate Converter</h1>
+  <p>Convert your dollars</p>
   <form id="currencyConversion">
-    <label for="amount">Amount: </label>
+    <label for="amount">CAD Amount: </label>
     <input type="number" name="amount" id="amount" placeholder="Enter in amount" required>
     <label for="currency">Currency: </label>
     <select name="currency" id="currency" required>
       <option disabled value="">
         Please Select Currency 1
       </option>
-      <option value="eur" title="Euro" aria-label="Euro">EUR</option>
-      <option value="usd" title="U.S. dollar" aria-label="U.S. dollar">USD</option>
-      <option value="cad" title="Canadian dollar" aria-label="Canadian dollar">CAD</option>
-      <option value="gbp" title="Great Britain pound" aria-label="Great Britain pound">GBP</option>
-      <option value="jpy" title="Japanese yen" aria-label="Japanese yen">JPY</option>
+      <option value="EUR" title="Euro" aria-label="Euro">EUR</option>
+      <option value="USD" title="U.S. dollar" aria-label="U.S. dollar">USD</option>
+      <option value="CAD" title="Canadian dollar" aria-label="Canadian dollar">CAD</option>
+      <option value="GBP" title="Great Britain pound" aria-label="Great Britain pound">GBP</option>
+      <option value="JPY" title="Japanese yen" aria-label="Japanese yen">JPY</option>
     </select>
     <button id="convert">Convert Currency</button>
   </form>
