@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincent's Currency Exchange</title>
+  <script src="exchange.js" defer></script>
+</head>
+
+<body>
+  <h1>Exchange Rate Converter</h1>
+  <form id="currencyConversion">
+    <label for="amount">Amount: </label>
+    <input type="number" name="amount" id="amount" placeholder="Enter in amount" required>
+    <label for="currency">Currency: </label>
+    <select name="currency" id="currency" required>
+      <option disabled value="">
+        Please Select Currency 1
+      </option>
+      <option value="eur" title="Euro" aria-label="Euro">EUR</option>
+      <option value="usd" title="U.S. dollar" aria-label="U.S. dollar">USD</option>
+      <option value="cad" title="Canadian dollar" aria-label="Canadian dollar">CAD</option>
+      <option value="gbp" title="Great Britain pound" aria-label="Great Britain pound">GBP</option>
+      <option value="jpy" title="Japanese yen" aria-label="Japanese yen">JPY</option>
+    </select>
+    <button id="convert">Convert Currency</button>
+  </form>
+  <div id="result"></div>
+</body>
+
+</html>
