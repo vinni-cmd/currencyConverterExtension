@@ -2,7 +2,7 @@
   "name": "Convert your CAD",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Extension to convert CAD to foreign currencies quickly",
+  "description": "Extension to convert Canadian dollars to foreign currencies",
   "icons": {
     "16": "icon16.png",
     "32": "icon32.png",
